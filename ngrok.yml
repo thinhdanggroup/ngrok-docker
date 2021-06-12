@@ -1,0 +1,4 @@
+authtoken: "1tr0XJl6BU68PoMiHcSUYGz9E7R_5LK2VzG91sE8fR89FQRWE"
+web_addr: 0.0.0.0:8081
+update: false
+log: stdout

@@ -1,0 +1,19 @@
+version: "2"
+services:
+  ngrok:
+    image: wernight/ngrok
+    ports:
+    - "8081:8081"
+    command:
+    - /bin/sh
+    - -c
+    - |
+      ngrok http simple-web:8080
+    volumes:
+    - .:/home/ngrok/.ngrok2/
+    depends_on:
+    - simple-web
+  simple-web:
+    build: ./simple-web
+    ports:
+    - "8080:8080"
