@@ -8,12 +8,17 @@ services:
     - /bin/sh
     - -c
     - |
-      ngrok http simple-web:8080
+      ngrok start --all
     volumes:
     - .:/home/ngrok/.ngrok2/
     depends_on:
     - simple-web
+    - ssh-server
   simple-web:
-    build: ./simple-web
+    build: simple-web/
     ports:
     - "8080:8080"
+  ssh-server:
+    build: ssh-server/
+    ports:
+    - "2222:22"
