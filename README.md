@@ -2,7 +2,7 @@
 
 ![banner](images/ngrok-banner.png)
 
-Simple example for [ngrok](https://ngrok.com/) and docker-compose.
+Simple example for [ngrok](https://ngrok.com/) and docker-compose. Make your local web service to the Internet in the simplest ways.
 
 ![deployment](images/ngrok-docker.png)
 
