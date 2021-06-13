@@ -14,11 +14,14 @@ services:
     depends_on:
     - simple-web
     - ssh-server
+    - nginx
   simple-web:
     build: simple-web/
-    ports:
-    - "8080:8080"
   ssh-server:
     build: ssh-server/
+  nginx:
+    image: nginx
     ports:
-    - "2222:22"
+    - "8080:8080"
+    volumes:
+    - ./nginx-conf/nginx.conf:/etc/nginx/nginx.conf:ro
