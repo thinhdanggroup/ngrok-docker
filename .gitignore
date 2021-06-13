@@ -131,3 +131,5 @@ dmypy.json
 
 .ngrok.yml
 .public_key
+
+.DS_Store
